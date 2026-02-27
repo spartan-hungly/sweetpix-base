@@ -1,9 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { CaretDown } from "@phosphor-icons/react";
 import { cn } from "@tailwind-config/utils/cn";
 import Link from "next/link";
-import { useState } from "react";
 
 const faqs = [
   {
@@ -51,8 +51,7 @@ const faqs = [
   {
     id: 8,
     question: "How much is shipping?",
-    answer:
-      "Shipping is FREE for all US orders! International shipping rates vary by destination.",
+    answer: "Shipping is FREE for all US orders! International shipping rates vary by destination.",
   },
   {
     id: 9,
@@ -64,7 +63,7 @@ const faqs = [
     id: 10,
     question: "How do I place an order?",
     answer:
-      'Simply visit our shop, select your tile size and quantity, upload your photos, and checkout. It\'s that easy!',
+      "Simply visit our shop, select your tile size and quantity, upload your photos, and checkout. It's that easy!",
   },
   {
     id: 11,
@@ -93,7 +92,7 @@ export const FAQSection = () => {
         <div className="grid gap-12 lg:grid-cols-[350px_1fr] lg:gap-16">
           {/* Left Side - Title */}
           <div>
-            <h2 className="font-heading mb-4 text-3xl font-bold uppercase leading-tight md:text-4xl">
+            <h2 className="font-heading mb-4 text-3xl leading-tight font-bold uppercase md:text-4xl">
               FREQUENTLY
               <br />
               SWEETPIX
