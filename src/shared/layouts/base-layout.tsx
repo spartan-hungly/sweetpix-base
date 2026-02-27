@@ -1,3 +1,3 @@
 export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
-  return <div className="flex h-screen flex-col overflow-hidden">{children}</div>;
+  return <div className="flex min-h-screen flex-col">{children}</div>;
 };
