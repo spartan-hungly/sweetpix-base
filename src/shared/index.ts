@@ -11,7 +11,6 @@ export * from "./providers";
 export * from "./utils";
 
 // APIs
-export * from "./apis";
 
 // Constants
 export * from "./constants";
