@@ -5,7 +5,8 @@ import { List, Phone, ShoppingCart, X } from "@phosphor-icons/react";
 import { cn } from "@tailwind-config/utils/cn";
 import Link from "next/link";
 
-import { Button } from "@/shared";
+import { ContactDialog } from "@/modules/contact";
+import { Button, useAuthRequest } from "@/shared";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -15,6 +16,7 @@ const navLinks = [
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { onOpenLogin } = useAuthRequest();
 
   return (
     <header className="sticky top-0 z-50 bg-white">
@@ -41,9 +43,10 @@ export const Header = () => {
 
             {/* Desktop Actions */}
             <div className="hidden items-center gap-3 lg:flex">
-              <Button variant="outlined-primary" size="md" startIcon={Phone}>
-                Contact
+              <Button variant="outlined-primary" size="md" onClick={onOpenLogin}>
+                Login
               </Button>
+              <ContactDialog />
               <Button variant="primary" size="md" startIcon={ShoppingCart}>
                 Order Now
               </Button>
@@ -79,8 +82,14 @@ export const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Button variant="outlined-primary" size="md" startIcon={Phone} fullWidth>
-            Contact
+          <Button
+            variant="outlined-primary"
+            size="md"
+            startIcon={Phone}
+            fullWidth
+            onClick={onOpenLogin}
+          >
+            Login
           </Button>
           <Button variant="primary" size="md" startIcon={ShoppingCart} fullWidth>
             Order Now

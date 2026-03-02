@@ -12,4 +12,5 @@ export const ClientAPIRoutes = {
 export const ClientRoutes: Record<RouteKey, string> = {
   [RouteKey.HOME]: "/home",
   [RouteKey.LOGIN]: "/login",
+  [RouteKey.STUDIO]: "/studio",
 };

@@ -8,6 +8,9 @@ export const CONTACT_QUICK_VIEW_PANEL_ID = "contact-quick-view-panel";
 export const MODAL_DIMENSIONS = {
   BASE: "max-h-[90vh] w-full max-w-[588px]",
   BASE_FORM: "max-h-[calc(90vh-150px)]",
+  LOGIN: "max-h-[90vh] w-full max-w-[26.25rem]",
+  SIGNUP: "max-h-[90vh] w-full max-w-[55rem] h-full sm:max-h-[50rem]",
+  CONTACT: "max-h-[90vh] w-full max-w-[45rem]",
 };
 
 export const SHEET_DIMENSIONS = {

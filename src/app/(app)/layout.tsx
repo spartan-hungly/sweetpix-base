@@ -1,0 +1,13 @@
+import { AppHeader, AppIconSidebar } from "@/modules/app";
+
+export default function AppLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex h-screen flex-col">
+      <AppHeader />
+      <div className="flex flex-1 flex-col overflow-hidden lg:flex-row">
+        <AppIconSidebar />
+        <main className="flex-1 overflow-auto">{children}</main>
+      </div>
+    </div>
+  );
+}

@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce-ui",
+  "name": "sweetpix-app",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -31,6 +31,7 @@
     "cookies-next": "^6.1.1",
     "dayjs": "^1.11.19",
     "husky": "^9.1.7",
+    "idb-keyval": "^6.2.2",
     "jotai": "^2.15.1",
     "jsonwebtoken": "^9.0.2",
     "language-list": "^0.0.3",

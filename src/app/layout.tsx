@@ -1,9 +1,11 @@
+import { Suspense } from "react";
 import { Provider as JotaiProvider } from "jotai";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
+import { LoginDialog, SignupDialog } from "@/modules/auth";
 import { AppProgressProvider, BaseLayout, CustomToaster, QueryProvider } from "@/shared";
 
 import "./globals.css";
@@ -41,12 +43,16 @@ export default function RootLayout({
       <body className={roboto.className} suppressHydrationWarning>
         <AppProgressProvider>
           <QueryProvider>
-            <NuqsAdapter>
-              <JotaiProvider>
-                <BaseLayout>{children}</BaseLayout>
-                <CustomToaster />
-              </JotaiProvider>
-            </NuqsAdapter>
+            <Suspense fallback={null}>
+              <NuqsAdapter>
+                <JotaiProvider>
+                  <BaseLayout>{children}</BaseLayout>
+                  <LoginDialog />
+                  <SignupDialog />
+                  <CustomToaster />
+                </JotaiProvider>
+              </NuqsAdapter>
+            </Suspense>
           </QueryProvider>
         </AppProgressProvider>
       </body>

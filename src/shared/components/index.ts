@@ -1,4 +1,3 @@
-export * from "./app-sidebar";
 export * from "./badge";
 export * from "./button";
 export * from "./center-card";
@@ -11,21 +10,25 @@ export * from "./input";
 export * from "./loading";
 export * from "./menu";
 export * from "./menu-item";
+export * from "./popover";
 export * from "./select";
 export * from "./separator";
 export * from "./sheet";
 export * from "./sidebar";
 export * from "./skeleton";
 export * from "./slider-comparison";
+export * from "./textarea";
 export * from "./toast";
 export * from "./tooltip";
 export * from "./typography";
 export * from "./youtube-embed";
 
 // React Hook Form
+export * from "./react-hook-form/RHFCheckbox";
 export * from "./react-hook-form/RHFInput";
 export * from "./react-hook-form/RHFPassword";
 export * from "./react-hook-form/RHFSelect";
+export * from "./react-hook-form/RHFTextarea";
 
 // Table
 export * from "./table";
@@ -33,4 +36,3 @@ export * from "./table";
 // Confirmation
 export * from "./confirmation-component/confirmation-content";
 export * from "./confirmation-component/confirmation-dialog";
-export * from "./confirmation-component/confirmation-modal";
